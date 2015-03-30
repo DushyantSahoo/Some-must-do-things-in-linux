@@ -1,0 +1,64 @@
+# Some common commands and things to do in linux brought under one readme from different sources (thanks to all)
+
+# Astyle editor for making an indented and good looking code
+astyle --style=allman filename
+
+# To add key when having proxy
+sudo apt-key adv --recv-keys --keyserver-options http-proxy=http_proxy=http://<proxy>:<port> --keyserver link
+
+# Convert a nii image to hdr and .img extension ( for neuroimaging guys )
+3dcalc -a short.nii -expr 'a' -prefix AnalyzeOutput1.hdr
+
+# Some spellcheck commands
+ispell yourfile.tex
+aspell --mode=tex -c yourfile.tex
+hunspell -l -t -i utf-8 yourfile.tex
+
+# Setup proxy settings
+export http_proxy=http://<proxy>:<port>
+export https_proxy=http://<proxy>:<port>
+
+# Setup up proxy settings for IITD
+export http_proxy=http://proxy61.iitd.ernet.in:3128
+export https_proxy=http://proxy61.iitd.ernet.in:3128
+
+Alternatively you can also do theese things by System Settings-> Networks-> Then manually adding the above proxy settings and applying system wide
+
+# For ubuntu firefox when it is not able to play HD videos aur the videos you are streaming are very slow
+# Don't do anything except what is written below ( All other changes are at owner's risk )
+    (For video quality)
+    Type about:config and hit enter.
+    Confirm you will be careful.
+    Right-click and select New > Boolean.
+    Name the preference media.mediasource.ignore_codecs.
+    Set its value to True.
+    media.mediasource.mp4.enabled to true
+    media.fragmented-mp4.* to true
+    media.fragmented-mp4.use-blank-decoder to false
+    
+    (Increase the cache size)
+    Look for the following entry:
+    browser.cache.disk.capacity 
+    Double-click to edit.
+    Change the value (bytes).
+Since your computer can access data in RAM faster than on a hard drive, moving cached data to RAM can improve your page load times. In Firefox, all you need to do to move your caches to RAM is open up about:config and make a few tweaks.
+
+Once you get into about:config, type browser.cache into the filter bar at the top. Find browser.cache.disk.enable and set it to false by double clicking on it. You'll then want to set browser.cache.memory.enable to true (mine seemed to already be set as such), and create a new preference by right clicking anywhere, hitting New, and choosing Integer. Call the preference browser.cache.memory.capacity and hit OK. In the next window, type in the number of kilobytes you want to assign to the cache (for example, typing 100000 would create a cache of 100,000 kilobytes or 100 megabytes). A value of -1 will tell Firefox to dynamically determine the cache size depending on how much RAM you have.
+
+
+# Some common git commands for intialisation and commit
+git init repository name
+git pull repository link
+git add --all
+git commit -m "first commit"
+git remote add origin repository link
+git push origin master
+
+# Add gnome and cairo dock for a good looking linux ( depends on the choice of person to person)
+
+sudo apt-get install gnome-shell
+sudo apt-get install ubuntu-gnome-desktop
+
+Alternatively go to software center and install gnome and cairo dock
+
+Once installed, log out of the system and click on the Ubuntu icon besides the login field. Choose GNOME or cairo dock ( depending on your choice) from the drop down
