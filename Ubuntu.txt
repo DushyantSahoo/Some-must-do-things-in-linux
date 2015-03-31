@@ -76,3 +76,29 @@ Choose GNOME or cairo dock ( depending on your choice) from the drop down
 # Some interesting commands for professor ( Should be interesting to check what it does)
 
 find . -printf "%A@, %C@, %A+, %C+, %s, %u, %h%f \n" > output.txt
+
+# Short list of mysql commands
+
+mysql -u root -p
+
+USE database_name
+     	Change to this database. You need to change to some database when you first connect to MySQL.
+ 
+SHOW DATABASES
+     	Lists all MySQL databases on the system.
+ 
+SHOW TABLES [FROM database_name]
+     	Lists all tables from the current database or from the database given in the command.
+ 
+DESCRIBE table_name
+SHOW FIELDS FROM table_name
+SHOW COLUMNS FROM table_name
+     	These commands all give a list of all columns (fields) from the given table, along with column type and other info.
+ 
+SHOW INDEX FROM table_name
+     	Lists all indexes from this tables.
+ 
+SET PASSWORD=PASSWORD('new_password')
+     	Allows the user to set his/her own password. 
+     	
+
