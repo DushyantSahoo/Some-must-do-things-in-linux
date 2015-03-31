@@ -41,9 +41,18 @@ Alternatively you can also do theese things by System Settings-> Networks-> Then
     browser.cache.disk.capacity 
     Double-click to edit.
     Change the value (bytes).
-Since your computer can access data in RAM faster than on a hard drive, moving cached data to RAM can improve your page load times. In Firefox, all you need to do to move your caches to RAM is open up about:config and make a few tweaks.
+Since your computer can access data in RAM faster than on a hard drive, 
+moving cached data to RAM can improve your page load times. In Firefox, 
+all you need to do to move your caches to RAM is open up about:config and make a few tweaks.
 
-Once you get into about:config, type browser.cache into the filter bar at the top. Find browser.cache.disk.enable and set it to false by double clicking on it. You'll then want to set browser.cache.memory.enable to true (mine seemed to already be set as such), and create a new preference by right clicking anywhere, hitting New, and choosing Integer. Call the preference browser.cache.memory.capacity and hit OK. In the next window, type in the number of kilobytes you want to assign to the cache (for example, typing 100000 would create a cache of 100,000 kilobytes or 100 megabytes). A value of -1 will tell Firefox to dynamically determine the cache size depending on how much RAM you have.
+Once you get into about:config, type browser.cache into the filter bar at the top. 
+Find browser.cache.disk.enable and set it to false by double clicking on it. 
+You'll then want to set browser.cache.memory.enable to true (mine seemed to already be set as such), 
+and create a new preference by right clicking anywhere, hitting New, and choosing Integer. 
+Call the preference browser.cache.memory.capacity and hit OK. In the next window, 
+type in the number of kilobytes you want to assign to the cache 
+(for example, typing 100000 would create a cache of 100,000 kilobytes or 100 megabytes). 
+A value of -1 will tell Firefox to dynamically determine the cache size depending on how much RAM you have.
 
 
 # Some common git commands for intialisation and commit
@@ -61,4 +70,9 @@ sudo apt-get install ubuntu-gnome-desktop
 
 Alternatively go to software center and install gnome and cairo dock
 
-Once installed, log out of the system and click on the Ubuntu icon besides the login field. Choose GNOME or cairo dock ( depending on your choice) from the drop down
+Once installed, log out of the system and click on the Ubuntu icon besides the login field. 
+Choose GNOME or cairo dock ( depending on your choice) from the drop down
+
+# Some interesting commands for professor ( Should be interesting to check what it does)
+
+find . -printf "%A@, %C@, %A+, %C+, %s, %u, %h%f \n" > output.txt
