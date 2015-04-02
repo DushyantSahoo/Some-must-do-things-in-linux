@@ -18,6 +18,11 @@ hunspell -l -t -i utf-8 yourfile.tex
 export http_proxy=http://<proxy>:<port>
 export https_proxy=http://<proxy>:<port>
 
+# Remove proxy settings 
+# check which all things are set
+env | grep proxy
+# unset all of them
+
 # Setup up proxy settings for IITD
 export http_proxy=http://proxy61.iitd.ernet.in:3128
 export https_proxy=http://proxy61.iitd.ernet.in:3128
