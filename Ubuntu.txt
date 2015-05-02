@@ -121,5 +121,9 @@ or open your /etc/sudoers file and append
 
 Defaults env_keep="https_proxy"
 
+Run Matlab in Ubuntu 
+sudo chmod -R a+rw ~/.matlab
+
+
      	
 
