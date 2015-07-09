@@ -124,6 +124,18 @@ Defaults env_keep="https_proxy"
 Run Matlab in Ubuntu 
 sudo chmod -R a+rw ~/.matlab
 
+Free your /boot
+
+cd /boot
+du -sk *|sort -n
+
+This gives all the images which have been there in your Ubuntu
+
+uname -a
+This gives the present kernel
+
+Now you can remove the kernel which you don't require, in this way you can free some space
+
 
      	
 
